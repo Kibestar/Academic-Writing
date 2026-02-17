@@ -1,0 +1,83 @@
+\documentclass[10pt,twocolumn,a4paper]{article} % Changed to a4paper to match geometry
+
+%% 1. Geometry and Margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Package Imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+% Removed inputenc (not needed in 2024+)
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb} % Added amssymb for extra symbols
+\usepackage{bm}
+
+%% 2. Tables and Figures
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tabularray}
+\usepackage{float}
+\usepackage{caption} 
+\usepackage{subcaption}
+\captionsetup{font=normalsize, justification=raggedright, singlelinecheck=false, textfont=bf, labelfont=bf}
+
+%% 3. Styling and Fonts
+\usepackage{helvet}
+\renewcommand{\familydefault}{\sfdefault}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{titling}
+\usepackage{authblk}
+\usepackage{siunitx}
+\usepackage{nicefrac}
+\usepackage{blindtext}
+
+%% 4. Colors (TU Delft palette)
+\definecolor{tudelftdarkblue}{RGB}{12,35,64}
+\definecolor{tudelftcyan}{RGB}{0,166,214}
+\definecolor{tudelftblue}{RGB}{0, 118, 194}
+\definecolor{titleblue}{rgb}{0.2, 0.4, 0.6}
+\definecolor{backcolour}{rgb}{0.92,0.94,0.96}
+
+% ... (Keep your \lstdefinestyle{mystyle} here) ...
+
+%% 5. Citations (Load before hyperref)
+\usepackage[square,sort,comma,numbers]{natbib}
+
+%% 6. Hyperref (ALMOST ALWAYS LAST)
+\usepackage[colorlinks=true, allcolors=titleblue]{hyperref}
+
+%% 7. Post-Hyperref Packages
+\usepackage{cleveref} % Highly suggested: use \cref{fig:label} for automatic "Figure 1"
+
+% Custom settings
+\numberwithin{table}{section}
+\numberwithin{figure}{section}
+\newcolumntype{K}[1]{>{\centering\arraybackslash}p{#1}}
+\newcolumntype{C}{>{\centering\arraybackslash}X}
+
+\title{
+    \normalfont \normalsize \textsc{EE4C01 (Academic Writing) Literature Review} \\ [14pt]
+    \huge Nuclear Reactors in Somalia: Political Context and Contributions
+}
+
+\author[1]{Giorgio Reccilongo}
+\author[2]{Paul Schneider}
+\author[2]{Felix Voßbrink}
+\affil[1]{\small{ME, TU Delft}}
+\affil[2]{\small{EPE, TU Delft}}
+
+\begin{document}
+\maketitle
+
+\input{01_Chapters/Abstract}
+\input{01_Chapters/Introduction}
+
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{IEEEtran}~\nocite{*}
+\bibliography{99_Reference/references.bib}
+
+\end{document}
