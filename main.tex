@@ -1,0 +1,120 @@
+\documentclass[journal]{IEEEtran}
+
+
+%% 1. Geometry and Margins
+\usepackage[a4paper,top=3cm,bottom=2cm,left=3cm,right=3cm,marginparwidth=2cm]{geometry}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Package Imports %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[english]{babel}
+\usepackage[T1]{fontenc}
+% Removed inputenc (not needed in 2024+)
+\usepackage{graphicx}
+\usepackage[normalem]{ulem}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{setspace}
+\usepackage{amsmath, amssymb} % Added amssymb for extra symbols
+\usepackage{bm}
+
+%% 2. Tables and Figures
+\usepackage{booktabs}
+\usepackage{tabularx}
+\usepackage{tabularray}
+\usepackage{float}
+
+
+%% 3. Styling and Fonts
+\usepackage{xcolor}
+\usepackage{listings}
+\usepackage{titling}
+\usepackage{authblk}
+\usepackage{siunitx}
+\usepackage{nicefrac}
+\usepackage{blindtext}
+
+%% 4. Colors (TU Delft palette)
+\definecolor{tudelftdarkblue}{RGB}{12,35,64}
+\definecolor{tudelftcyan}{RGB}{0,166,214}
+\definecolor{tudelftblue}{RGB}{0, 118, 194}
+\definecolor{titleblue}{rgb}{0.2, 0.4, 0.6}
+\definecolor{backcolour}{rgb}{0.92,0.94,0.96}
+\hyphenation{op-tical net-works semi-conduc-tor}
+
+
+\begin{document}
+%
+% paper title
+% Titles are generally capitalized except for words such as a, an, and, as,
+% at, but, by, for, in, nor, of, on, or, the, to and up, which are usually
+% not capitalized unless they are the first or last word of the title.
+% Linebreaks \\ can be used within to get better formatting as desired.
+% Do not put math or special symbols in the title.
+\title{How Do Modern High-Voltage DC-DC Converter Topologies (e.g., Resonant vs. Hardswitched) Compare in Terms of Efficiency and Mass for Ion Thruster PPUs?}
+
+
+\author{Paul Schneider,~\IEEEmembership{Student,~EPE,}
+        Giorgio Recchilongo,~\IEEEmembership{Student,~ME,}
+        and~Felix~Voßbrink,~\IEEEmembership{Student,~EPE}% <-this % stops a space
+\thanks{This article was written as part of the course EE4C01 Profile Orientation \& Academic Skills of the EEMCS Faculty at TU Delft. Total word count:}}
+
+% note the % following the last \IEEEmembership and also \thanks - 
+% these prevent an unwanted space from occurring between the last author name
+% and the end of the author line. i.e., if you had this:
+% 
+% \author{....lastname \thanks{...} \thanks{...} }
+%                     ^------------^------------^----Do not want these spaces!
+%
+% a space would be appended to the last name and could cause every name on that
+% line to be shifted left slightly. This is one of those "LaTeX things". For
+% instance, "\textbf{A} \textbf{B}" will typeset as "A B" not "AB". To get
+% "AB" then you have to do: "\textbf{A}\textbf{B}"
+% \thanks is no different in this regard, so shield the last } of each \thanks
+% that ends a line with a % and do not let a space in before the next \thanks.
+% Spaces after \IEEEmembership other than the last one are OK (and needed) as
+% you are supposed to have spaces between the names. For what it is worth,
+% this is a minor point as most people would not even notice if the said evil
+% space somehow managed to creep in.
+
+
+
+% The paper headers
+% \markboth{}%
+% {Shell \MakeLowercase{\textit{et al.}}: Bare Demo of IEEEtran.cls for IEEE Journals}
+
+
+
+
+
+
+
+
+
+
+% make the title area
+\maketitle
+
+% As a general rule, do not put math, special symbols or citations
+% in the abstract or keywords.
+\begin{abstract}
+The abstract goes here.
+\end{abstract}
+
+% Note that keywords are not normally used for peerreview papers.
+% \begin{IEEEkeywords}
+% IEEE, IEEEtran, journal, \LaTeX, paper, template.
+% \end{IEEEkeywords}
+
+
+\IEEEpeerreviewmaketitle
+
+
+\input{01_Chapters/Introduction}
+\input{01_Chapters/Methods}
+
+% Bibliography (Uncomment when needed)
+\addcontentsline{toc}{section}{References}
+\bibliographystyle{IEEEtran}
+\bibliography{97_Reference/references.bib}
+
+\end{document}
+
+
