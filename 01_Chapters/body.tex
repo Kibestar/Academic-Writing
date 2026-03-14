@@ -3,6 +3,11 @@
 \subsection{Soft Switching: Resonant Converters}
 \subsubsection{Zero Voltage Switching}
 \subsubsection{Zero Current Switching}
+
 \subsection{Efficiency Comparison}
 \subsection{Weight Comparison}
+The mass of ion thruster power conversion units is a critical constraint in space applications, where payload weight directly dictates launch costs and mission feasibility. Hard-switching architectures necessitate heavy external dv/dt filters to suppress voltage spikes and protect sensitive components. As noted by Cai et al. \cite{cai2019voltage}, these passive filters significantly increase the overall size and weight of the propulsion system. While soft-switching can reduce total mass by integrating the filtering effect into the switching transition, research into weight optimization through the control of these transitions remains limited.
+
 \subsection{Reliability Comparison}
+The reliability of power conversion for ion thrusters involves a trade-off between electrical stress and architectural complexity. Tang et al. \cite{tang1998emi} demonstrate that soft-switching improves reliability by reducing $dv/dt$ and $di/dt$ rates, which lowers electromagnetic interference (EMI) and common-mode noise compared to hard-switching. In the context of space propulsion, this reduction is critical as high EMI can interfere with sensitive spacecraft antennas and communication links. By using snubber capacitors to slow voltage transitions, soft-switching mitigates stress on insulation and parasitic components within the thruster's power processing unit. However, this is offset by a higher component count, including auxiliary switches and resonant inductors, which statistically increases potential failure points. % include paper on hard and soft switch to show the diff in component count
+Furthermore, the increased system complexity required for precise timing control adds vulnerability; any control failure can lead to hard-switching under high-stress conditions, potentially negating the reliability benefits for long-duration missions.
